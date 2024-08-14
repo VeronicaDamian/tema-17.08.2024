@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Molengo", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body{
+    background: #F8EDE3;
+    min-height: 500vh;
+}
+
+section {
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    height: 100vh;
+    width: 100vw;          
+}
+
+header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background: #D1BB9E;
+    z-index: 10000000;
+}
+
+h1{
+    color: #F8F4E1;
+    font-family: "Mystery Quest", system-ui;
+    font-weight: 400;
+    font-style: normal;    
+}
+
+header .fruits{
+    position: relative;
+    font-family: "Mystery Quest", system-ui;
+    font-weight: 500;
+    font-size: 3em;
+    margin-left: 35px;
+    text-decoration: none;
+    color: #543310;
+    letter-spacing: 2px;
+
+}
+
+header ul{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 2.5em;
+    letter-spacing: 2px;
+
+}
+
+header ul li {
+    position: relative;
+    list-style: none;
+}
+
+header ul li a {
+    position: relative;
+    padding: 100px;
+    padding-bottom: 16px;
+    text-decoration: none;
+    color: #543310;
+    cursor: pointer;
+}
+
+
+nav ul li a:hover {
+    border-bottom: 3px solid #543310;
+}
+
+
+
+.light-background {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #F8EDE3;
+}
+
+.dark-background {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #DFD3C3;
+}
+
+#apple-bg, #pear-bg, #mango-bg, #grape-bg, #strawberry-bg {
+    width: 1000px;
+    height: 500px;
+    background-color: #AF8F6F;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(84, 51, 16, 0.7);
+}
+
+.apple-img, .pear-img, .mango-img, .grape-img, .strawberries-img {
+    width: 263px;
+    height: 305px;
+    border-radius: 10px;
+    border: 1px solid #543310;
+    position: relative;
+    left: 60%;
+}
+
+.first-card {
+    height: 50px;
+    width: 250px;
+    font-size: 45px;
+    position: relative;
+    top: 15%;
+    left: 25%;
+    color: #F8F4E1;
+}
+
+.description {
+    height: 50px;
+    width: 400px;
+    font-size: 28px;
+    font-family: "Molengo", sans-serif;
+    color: #F8F4E1;
+    position: relative;
+    top: 20%;
+    left: 10%;
+    align-content: center;
+    text-align: justify;
+
+}

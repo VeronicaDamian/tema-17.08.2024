@@ -7,22 +7,14 @@
     font-style: normal;
 }
 
+body{
+    background: #F8EDE3;
+    min-height: 100vh;
+}
+
 html {
     scroll-behavior: smooth;
     overflow-x: hidden;
-}
-
-body{
-    background: #F8EDE3;
-    min-height: 500vh;
-}
-
-section {
-    display: flex;
-    justify-content: center; 
-    align-items: center;     
-    height: 100vh;
-    width: 100vw;          
 }
 
 header{
@@ -35,18 +27,10 @@ header{
     align-items: center;
     padding: 10px;
     background: #D1BB9E;
-    z-index: 10000000;
-}
-
-h1{
-    color: #F8F4E1;
-    font-family: "Mystery Quest", system-ui;
-    font-weight: 400;
-    font-style: normal;    
+    z-index: 999;
 }
 
 header .fruits{
-    position: relative;
     font-family: "Mystery Quest", system-ui;
     font-weight: 500;
     font-size: 3em;
@@ -54,52 +38,71 @@ header .fruits{
     text-decoration: none;
     color: #543310;
     letter-spacing: 2px;
+}
 
+.menu {
+    position: relative;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #543310;
 }
 
 header ul{
-    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-size: 2.5em;
     letter-spacing: 2px;
-
 }
 
 header ul li {
-    position: relative;
     list-style: none;
 }
 
 header ul li a {
-    position: relative;
-    padding: 100px;
-    padding-bottom: 16px;
+    float: left;
+    padding-left: 16px;
+    padding-right: 16px;
     text-decoration: none;
     color: #543310;
     cursor: pointer;
 }
 
-
 nav ul li a:hover {
     border-bottom: 3px solid #543310;
 }
 
-
+section {
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    height: 100vh;
+    width: 100%;          
+}
 
 .light-background {
-    position: relative;
-    width: 100%;
-    height: 100vh;
     background-color: #F8EDE3;
 }
 
 .dark-background {
-    position: relative;
-    width: 100%;
-    height: 100vh;
     background-color: #DFD3C3;
+}
+
+h1{
+    color: #F8F4E1;
+    font-family: "Mystery Quest", system-ui;
+    font-weight: 400;
+    font-style: normal;    
 }
 
 #apple-bg, #pear-bg, #mango-bg, #grape-bg, #strawberry-bg {
@@ -141,4 +144,85 @@ nav ul li a:hover {
     align-content: center;
     text-align: justify;
 
+}
+
+@media (max-width: 1000px) {
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        background-color: #D1BB9E;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        display: none;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-links li {
+        width: 100%;
+        text-align: left;
+    }
+
+    .menu {
+        display: flex;
+        justify-content: left; 
+        flex-grow: 0.3; 
+    }
+
+    .menu-toggle {
+        display: block;
+        margin-left: 0px;
+    }
+
+
+    section {
+        min-height: auto;
+        padding: 60px 0;
+    }
+    
+    #apple-bg, #pear-bg, #mango-bg, #grape-bg, #strawberry-bg {
+        width: 500px;
+        height: 700px;
+        background-color: #AF8F6F;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(84, 51, 16, 0.7);
+    }
+    
+    .apple-img, .pear-img, .mango-img, .grape-img, .strawberries-img {
+        width: 263px;
+        height: 305px;
+        border-radius: 10px;
+        border: 1px solid #543310;
+        position: relative;
+        bottom: -35%;
+        left: 25%;
+    }
+    
+    .first-card {
+        height: 50px;
+        width: 250px;
+        font-size: 45px;
+        position: relative;
+        top: 5%;
+        text-align: center;
+        color: #F8F4E1;
+    }
+    
+    .description {
+        height: 50px;
+        width: 400px;
+        font-size: 22px;
+        font-family: "Molengo", sans-serif;
+        color: #F8F4E1;
+        position: relative;
+        top: 10%;
+        left: 10%;
+        align-content: center;
+        text-align: justify;
+    }
 }

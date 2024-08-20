@@ -1,228 +1,353 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Molengo", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Molengo", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
-body{
-    background: #F8EDE3;
-    min-height: 100vh;
+body {
+  background: #f8ede3;
+  min-height: 100vh;
 }
 
 html {
-    scroll-behavior: smooth;
-    overflow-x: hidden;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
-header{
-    position: sticky;
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    background: #D1BB9E;
-    z-index: 999;
+header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background: #d1bb9e;
+  z-index: 999;
 }
 
-header .fruits{
-    font-family: "Mystery Quest", system-ui;
-    font-weight: 500;
-    font-size: 3em;
-    margin-left: 35px;
-    text-decoration: none;
-    color: #543310;
-    letter-spacing: 2px;
+header .fruits {
+  font-family: "Mystery Quest", system-ui;
+  font-weight: 500;
+  font-size: 3em;
+  margin-left: 35px;
+  text-decoration: none;
+  color: #543310;
+  letter-spacing: 2px;
 }
 
 .menu {
-    position: relative;
+  position: relative;
 }
 
 .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 15px;
+  list-style: none;
+  display: flex;
+  gap: 15px;
 }
 
 .menu-toggle {
-    display: none;
-    font-size: 28px;
-    cursor: pointer;
-    color: #543310;
+  font-size: 28px;
+  cursor: pointer;
+  color: #543310;
 }
 
-header ul{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 2.5em;
-    letter-spacing: 2px;
+header ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 2.5em;
+  letter-spacing: 2px;
 }
 
 header ul li {
-    list-style: none;
+  list-style: none;
 }
 
 header ul li a {
-    float: left;
-    padding-left: 16px;
-    padding-right: 16px;
-    text-decoration: none;
-    color: #543310;
-    cursor: pointer;
+  float: left;
+  padding-left: 16px;
+  padding-right: 16px;
+  text-decoration: none;
+  color: #543310;
+  cursor: pointer;
 }
 
 nav ul li a:hover {
-    border-bottom: 3px solid #543310;
+  border-bottom: 3px solid #543310;
 }
 
 section {
-    display: flex;
-    justify-content: center; 
-    align-items: center;     
-    height: 100vh;
-    width: 100%;          
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
 }
 
 .light-background {
-    background-color: #F8EDE3;
+  background-color: #f8ede3;
 }
 
 .dark-background {
-    background-color: #DFD3C3;
+  background-color: #dfd3c3;
 }
 
-h1{
-    color: #F8F4E1;
-    font-family: "Mystery Quest", system-ui;
-    font-weight: 400;
-    font-style: normal;    
+h1 {
+  color: #f8f4e1;
+  font-family: "Mystery Quest", system-ui;
+  font-weight: 400;
+  font-style: normal;
 }
 
-#apple-bg, #pear-bg, #mango-bg, #grape-bg, #strawberry-bg {
-    width: 1000px;
-    height: 500px;
-    background-color: #AF8F6F;
+#apple-bg,
+#pear-bg,
+#mango-bg,
+#grape-bg,
+#strawberry-bg {
+  width: 1000px;
+  height: 500px;
+  background-color: #af8f6f;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(84, 51, 16, 0.7);
+}
+
+.apple-img,
+.pear-img,
+.mango-img,
+.grape-img,
+.strawberries-img {
+  width: 263px;
+  height: 305px;
+  border-radius: 10px;
+  border: 1px solid #543310;
+  position: relative;
+  left: 60%;
+}
+
+.first-card {
+  height: 50px;
+  width: 250px;
+  font-size: 45px;
+  position: relative;
+  top: 15%;
+  left: 25%;
+  color: #f8f4e1;
+}
+
+.description {
+  height: 50px;
+  width: 400px;
+  font-size: 28px;
+  font-family: "Molengo", sans-serif;
+  color: #f8f4e1;
+  position: relative;
+  top: 20%;
+  left: 10%;
+  align-content: center;
+  text-align: justify;
+}
+
+@media (min-width: 481px) and (max-width: 1200px) {
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    background-color: #d1bb9e;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    display: none;
+  }
+
+  .menu {
+    position: absolute;
+  }
+
+  header a#menu-toggle:hover{
+    border-bottom: 3px solid #543310;
+  }
+
+  .nav-links.show {
+    display: flex;
+  } 
+
+  .nav-links li {
+    width: 100%;
+    text-align: left;
+    display: block;
+  }
+
+  .nav-links li a {
+    display: block;
+    background-color: #d1bb9e;
+  }
+
+  
+  #menu-toggle {
+    display: block;
+    margin-left: 10px;
+ 
+  }
+
+  section {
+    min-height: auto;
+    padding: 60px 0;
+  }
+
+  #apple-bg,
+  #pear-bg,
+  #mango-bg,
+  #grape-bg,
+  #strawberry-bg {
+    width: 500px;
+    height: 700px;
+    background-color: #af8f6f;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(84, 51, 16, 0.7);
-}
+  }
 
-.apple-img, .pear-img, .mango-img, .grape-img, .strawberries-img {
+  .apple-img,
+  .pear-img,
+  .mango-img,
+  .grape-img,
+  .strawberries-img {
     width: 263px;
     height: 305px;
     border-radius: 10px;
     border: 1px solid #543310;
     position: relative;
-    left: 60%;
-}
+    bottom: -35%;
+    left: 25%;
+  }
 
-.first-card {
+  .first-card {
     height: 50px;
     width: 250px;
     font-size: 45px;
     position: relative;
-    top: 15%;
-    left: 25%;
-    color: #F8F4E1;
-}
+    top: 5%;
+    text-align: center;
+    color: #f8f4e1;
+  }
 
-.description {
+  .description {
     height: 50px;
     width: 400px;
-    font-size: 28px;
+    font-size: 22px;
     font-family: "Molengo", sans-serif;
-    color: #F8F4E1;
+    color: #f8f4e1;
     position: relative;
-    top: 20%;
+    top: 10%;
     left: 10%;
     align-content: center;
     text-align: justify;
-
+  }
 }
 
-@media (max-width: 1000px) {
 
-    .nav-links {
-        flex-direction: column;
-        align-items: center;
-        background-color: #D1BB9E;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        display: none;
-    }
+@media (min-width: 319px) and (max-width: 480px) {
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    background-color: #d1bb9e;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    display: none;
+  }
 
-    .nav-links.show {
-        display: flex;
-    }
+  .menu {
+    position: absolute;
 
-    .nav-links li {
-        width: 100%;
-        text-align: left;
-    }
+  }
 
-    .menu {
-        display: flex;
-        justify-content: left; 
-        flex-grow: 0.3; 
-    }
+  header a#menu-toggle:hover{
+    border-bottom: 3px solid #543310;
+  }
 
-    .menu-toggle {
-        display: block;
-        margin-left: 0px;
-    }
+  .nav-links.show {
+    display: flex;
 
+  } 
 
-    section {
-        min-height: auto;
-        padding: 60px 0;
-    }
-    
-    #apple-bg, #pear-bg, #mango-bg, #grape-bg, #strawberry-bg {
-        width: 500px;
-        height: 700px;
-        background-color: #AF8F6F;
-        border-radius: 10px;
-        box-shadow: 0px 4px 10px rgba(84, 51, 16, 0.7);
-    }
-    
-    .apple-img, .pear-img, .mango-img, .grape-img, .strawberries-img {
-        width: 263px;
-        height: 305px;
-        border-radius: 10px;
-        border: 1px solid #543310;
-        position: relative;
-        bottom: -35%;
-        left: 25%;
-    }
-    
-    .first-card {
-        height: 50px;
-        width: 250px;
-        font-size: 45px;
-        position: relative;
-        top: 5%;
-        text-align: center;
-        color: #F8F4E1;
-    }
-    
-    .description {
-        height: 50px;
-        width: 400px;
-        font-size: 22px;
-        font-family: "Molengo", sans-serif;
-        color: #F8F4E1;
-        position: relative;
-        top: 10%;
-        left: 10%;
-        align-content: center;
-        text-align: justify;
-    }
+  .nav-links li {
+    width: 100%;
+    text-align: left;
+    display: block;
+  }
+
+  .nav-links li a {
+    display: block;
+    background-color: #d1bb9e;
+  
+  }
+
+  
+  #menu-toggle {
+    display: block;
+    margin-left: 10px;
+
+ 
+  }
+
+  section {
+    min-height: auto;
+    padding: 60px 0;
+  }
+
+  #apple-bg,
+  #pear-bg,
+  #mango-bg,
+  #grape-bg,
+  #strawberry-bg {
+    width: 300px;
+    height: 700px;
+    background-color: #af8f6f;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(84, 51, 16, 0.7);
+  }
+
+  .apple-img,
+  .pear-img,
+  .mango-img,
+  .grape-img,
+  .strawberries-img {
+    width: 233px;
+    height: 275px;
+    border-radius: 10px;
+    border: 1px solid #543310;
+    position: relative;
+    bottom: -42%;
+    left: 10%;
+  }
+
+  .first-card {
+    height: 50px;
+    width: 150px;
+    font-size: 35px;
+    position: relative;
+    top: 5%;
+    text-align: center;
+    color: #f8f4e1;
+  }
+
+  .description {
+    height: 50px;
+    width: 230px;
+    font-size: 20px;
+    font-family: "Molengo", sans-serif;
+    color: #f8f4e1;
+    position: relative;
+    top: 10%;
+    left: 10%;
+    align-content: center;
+    text-align: justify;
+  }
+
 }
